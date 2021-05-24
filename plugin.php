@@ -9,7 +9,9 @@
 
 namespace DisableAccounts;
 
-\Altis\register_class_path( __NAMESPACE__, __DIR__ . '/inc' );
+if ( function_exists( '\Altis\register_class_path' ) ) {
+    \Altis\register_class_path( __NAMESPACE__, __DIR__ . '/inc' );
+}
 
 require __DIR__ . '/inc/namespace.php';
 
